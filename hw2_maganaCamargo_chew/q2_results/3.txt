@@ -1,0 +1,593 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q2/domain.pddl q2/problem3.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 16 rules.
+Computing model... [0.010s CPU, 0.006s wall-clock]
+1865 relevant atoms
+1307 auxiliary atoms
+3172 final queue length
+3607 total queue pushes
+Completing instantiation... [0.000s CPU, 0.005s wall-clock]
+Instantiating: [0.020s CPU, 0.017s wall-clock]
+Computing fact groups...
+Finding invariants...
+9 initial candidates
+Finding invariants: [0.000s CPU, 0.000s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.007s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+4 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.004s wall-clock]
+Reordering and filtering variables...
+4 of 4 variables necessary.
+0 of 4 mutex groups necessary.
+870 of 870 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 4
+Translator derived variables: 0
+Translator facts: 439
+Translator goal facts: 3
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 870
+Translator axioms: 0
+Translator task size: 3710
+Translator peak memory: 34716 KB
+Writing output... [0.010s CPU, 0.002s wall-clock]
+Done! [0.040s CPU, 0.038s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas
+[t=0.001070s, 12132 KB] reading input...
+[t=0.003372s, 12424 KB] done reading input!
+[t=0.004846s, 12688 KB] Simplifying 870 unary operators... done! [870 unary operators]
+[t=0.005110s, 12688 KB] time to simplify: 0.000299s
+[t=0.005181s, 12688 KB] Initializing additive heuristic...
+[t=0.005202s, 12688 KB] Initializing FF heuristic...
+[t=0.005228s, 12688 KB] Building successor generator...done!
+[t=0.005473s, 12840 KB] peak memory difference for successor generator creation: 152 KB
+[t=0.005486s, 12840 KB] time for successor generation creation: 0.000204s
+[t=0.005501s, 12840 KB] Variables: 4
+[t=0.005513s, 12840 KB] FactPairs: 439
+[t=0.005524s, 12840 KB] Bytes per state: 4
+[t=0.005542s, 12840 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.005583s, 12840 KB] New best heuristic value for ff: 114
+[t=0.005596s, 12840 KB] g=0, 1 evaluated, 0 expanded
+[t=0.005611s, 12840 KB] Initial heuristic value for ff: 114
+[t=0.005622s, 12840 KB] pruning method: none
+[t=0.007090s, 12840 KB] New best heuristic value for ff: 113
+[t=0.007113s, 12840 KB] g=28, 110 evaluated, 106 expanded
+[t=0.009923s, 12840 KB] New best heuristic value for ff: 112
+[t=0.009960s, 12840 KB] g=83, 325 evaluated, 213 expanded
+[t=0.009978s, 12840 KB] New best heuristic value for ff: 111
+[t=0.009984s, 12840 KB] g=84, 326 evaluated, 214 expanded
+[t=0.010007s, 12840 KB] New best heuristic value for ff: 110
+[t=0.010013s, 12840 KB] g=85, 328 evaluated, 215 expanded
+[t=0.010046s, 12840 KB] New best heuristic value for ff: 109
+[t=0.010052s, 12840 KB] g=86, 331 evaluated, 216 expanded
+[t=0.010083s, 12840 KB] New best heuristic value for ff: 108
+[t=0.010089s, 12840 KB] g=87, 334 evaluated, 217 expanded
+[t=0.010121s, 12840 KB] New best heuristic value for ff: 107
+[t=0.010127s, 12840 KB] g=88, 337 evaluated, 218 expanded
+[t=0.010158s, 12840 KB] New best heuristic value for ff: 106
+[t=0.010164s, 12840 KB] g=89, 340 evaluated, 219 expanded
+[t=0.010196s, 12840 KB] New best heuristic value for ff: 105
+[t=0.010203s, 12840 KB] g=90, 343 evaluated, 220 expanded
+[t=0.010235s, 12840 KB] New best heuristic value for ff: 104
+[t=0.010241s, 12840 KB] g=91, 346 evaluated, 221 expanded
+[t=0.010274s, 12840 KB] New best heuristic value for ff: 103
+[t=0.010280s, 12840 KB] g=92, 349 evaluated, 222 expanded
+[t=0.010312s, 12840 KB] New best heuristic value for ff: 102
+[t=0.010318s, 12840 KB] g=93, 352 evaluated, 223 expanded
+[t=0.010350s, 12840 KB] New best heuristic value for ff: 101
+[t=0.010356s, 12840 KB] g=94, 355 evaluated, 224 expanded
+[t=0.010387s, 12840 KB] New best heuristic value for ff: 100
+[t=0.010392s, 12840 KB] g=95, 358 evaluated, 225 expanded
+[t=0.010423s, 12840 KB] New best heuristic value for ff: 99
+[t=0.010429s, 12840 KB] g=96, 361 evaluated, 226 expanded
+[t=0.010460s, 12840 KB] New best heuristic value for ff: 98
+[t=0.010466s, 12840 KB] g=97, 364 evaluated, 227 expanded
+[t=0.010498s, 12840 KB] New best heuristic value for ff: 97
+[t=0.010503s, 12840 KB] g=98, 367 evaluated, 228 expanded
+[t=0.010537s, 12840 KB] New best heuristic value for ff: 96
+[t=0.010544s, 12840 KB] g=99, 370 evaluated, 229 expanded
+[t=0.010575s, 12840 KB] New best heuristic value for ff: 95
+[t=0.010585s, 12840 KB] g=100, 373 evaluated, 230 expanded
+[t=0.010618s, 12840 KB] New best heuristic value for ff: 94
+[t=0.010625s, 12840 KB] g=101, 376 evaluated, 231 expanded
+[t=0.010657s, 12840 KB] New best heuristic value for ff: 93
+[t=0.010663s, 12840 KB] g=102, 379 evaluated, 232 expanded
+[t=0.010695s, 12840 KB] New best heuristic value for ff: 92
+[t=0.010700s, 12840 KB] g=103, 382 evaluated, 233 expanded
+[t=0.010732s, 12840 KB] New best heuristic value for ff: 91
+[t=0.010737s, 12840 KB] g=104, 385 evaluated, 234 expanded
+[t=0.010769s, 12840 KB] New best heuristic value for ff: 90
+[t=0.010774s, 12840 KB] g=105, 388 evaluated, 235 expanded
+[t=0.010806s, 12840 KB] New best heuristic value for ff: 89
+[t=0.010812s, 12840 KB] g=106, 391 evaluated, 236 expanded
+[t=0.010843s, 12840 KB] New best heuristic value for ff: 88
+[t=0.010849s, 12840 KB] g=107, 394 evaluated, 237 expanded
+[t=0.010879s, 12840 KB] New best heuristic value for ff: 87
+[t=0.010885s, 12840 KB] g=108, 397 evaluated, 238 expanded
+[t=0.010915s, 12840 KB] New best heuristic value for ff: 86
+[t=0.010921s, 12840 KB] g=109, 400 evaluated, 239 expanded
+[t=0.010952s, 12840 KB] New best heuristic value for ff: 85
+[t=0.010958s, 12840 KB] g=110, 403 evaluated, 240 expanded
+[t=0.013039s, 12840 KB] New best heuristic value for ff: 84
+[t=0.013048s, 12840 KB] g=138, 648 evaluated, 321 expanded
+[t=0.013088s, 12840 KB] New best heuristic value for ff: 83
+[t=0.013094s, 12840 KB] g=139, 652 evaluated, 322 expanded
+[t=0.013108s, 12840 KB] New best heuristic value for ff: 82
+[t=0.013113s, 12840 KB] g=140, 653 evaluated, 323 expanded
+[t=0.013136s, 12840 KB] New best heuristic value for ff: 81
+[t=0.013141s, 12840 KB] g=141, 655 evaluated, 324 expanded
+[t=0.013173s, 12840 KB] New best heuristic value for ff: 80
+[t=0.013179s, 12840 KB] g=142, 658 evaluated, 325 expanded
+[t=0.013210s, 12840 KB] New best heuristic value for ff: 79
+[t=0.013222s, 12840 KB] g=143, 661 evaluated, 326 expanded
+[t=0.013253s, 12840 KB] New best heuristic value for ff: 78
+[t=0.013259s, 12840 KB] g=144, 664 evaluated, 327 expanded
+[t=0.013289s, 12840 KB] New best heuristic value for ff: 77
+[t=0.013295s, 12840 KB] g=145, 667 evaluated, 328 expanded
+[t=0.013326s, 12840 KB] New best heuristic value for ff: 76
+[t=0.013332s, 12840 KB] g=146, 670 evaluated, 329 expanded
+[t=0.013363s, 12840 KB] New best heuristic value for ff: 75
+[t=0.013369s, 12840 KB] g=147, 673 evaluated, 330 expanded
+[t=0.013399s, 12840 KB] New best heuristic value for ff: 74
+[t=0.013405s, 12840 KB] g=148, 676 evaluated, 331 expanded
+[t=0.013436s, 12840 KB] New best heuristic value for ff: 73
+[t=0.013442s, 12840 KB] g=149, 679 evaluated, 332 expanded
+[t=0.013473s, 12840 KB] New best heuristic value for ff: 72
+[t=0.013478s, 12840 KB] g=150, 682 evaluated, 333 expanded
+[t=0.013507s, 12840 KB] New best heuristic value for ff: 71
+[t=0.013516s, 12840 KB] g=151, 685 evaluated, 334 expanded
+[t=0.013548s, 12840 KB] New best heuristic value for ff: 70
+[t=0.013555s, 12840 KB] g=152, 688 evaluated, 335 expanded
+[t=0.013584s, 12840 KB] New best heuristic value for ff: 69
+[t=0.013591s, 12840 KB] g=153, 691 evaluated, 336 expanded
+[t=0.013620s, 12840 KB] New best heuristic value for ff: 68
+[t=0.013627s, 12840 KB] g=154, 694 evaluated, 337 expanded
+[t=0.013656s, 12840 KB] New best heuristic value for ff: 67
+[t=0.013661s, 12840 KB] g=155, 697 evaluated, 338 expanded
+[t=0.013690s, 12840 KB] New best heuristic value for ff: 66
+[t=0.013696s, 12840 KB] g=156, 700 evaluated, 339 expanded
+[t=0.013725s, 12840 KB] New best heuristic value for ff: 65
+[t=0.013730s, 12840 KB] g=157, 703 evaluated, 340 expanded
+[t=0.013760s, 12840 KB] New best heuristic value for ff: 64
+[t=0.013765s, 12840 KB] g=158, 706 evaluated, 341 expanded
+[t=0.013794s, 12840 KB] New best heuristic value for ff: 63
+[t=0.013800s, 12840 KB] g=159, 709 evaluated, 342 expanded
+[t=0.013829s, 12840 KB] New best heuristic value for ff: 62
+[t=0.013834s, 12840 KB] g=160, 712 evaluated, 343 expanded
+[t=0.013863s, 12840 KB] New best heuristic value for ff: 61
+[t=0.013869s, 12840 KB] g=161, 715 evaluated, 344 expanded
+[t=0.013897s, 12840 KB] New best heuristic value for ff: 60
+[t=0.013903s, 12840 KB] g=162, 718 evaluated, 345 expanded
+[t=0.013931s, 12840 KB] New best heuristic value for ff: 59
+[t=0.013937s, 12840 KB] g=163, 721 evaluated, 346 expanded
+[t=0.013965s, 12840 KB] New best heuristic value for ff: 58
+[t=0.013971s, 12840 KB] g=164, 724 evaluated, 347 expanded
+[t=0.013998s, 12840 KB] New best heuristic value for ff: 57
+[t=0.014004s, 12840 KB] g=165, 727 evaluated, 348 expanded
+[t=0.014032s, 12840 KB] New best heuristic value for ff: 56
+[t=0.014037s, 12840 KB] g=166, 730 evaluated, 349 expanded
+[t=0.015223s, 12840 KB] New best heuristic value for ff: 55
+[t=0.015232s, 12840 KB] g=194, 895 evaluated, 403 expanded
+[t=0.015245s, 12840 KB] New best heuristic value for ff: 54
+[t=0.015251s, 12840 KB] g=195, 896 evaluated, 404 expanded
+[t=0.015272s, 12840 KB] New best heuristic value for ff: 53
+[t=0.015277s, 12840 KB] g=196, 898 evaluated, 405 expanded
+[t=0.015298s, 12840 KB] New best heuristic value for ff: 52
+[t=0.015303s, 12840 KB] g=197, 900 evaluated, 406 expanded
+[t=0.015323s, 12840 KB] New best heuristic value for ff: 51
+[t=0.015329s, 12840 KB] g=198, 902 evaluated, 407 expanded
+[t=0.015349s, 12840 KB] New best heuristic value for ff: 50
+[t=0.015354s, 12840 KB] g=199, 904 evaluated, 408 expanded
+[t=0.015374s, 12840 KB] New best heuristic value for ff: 49
+[t=0.015380s, 12840 KB] g=200, 906 evaluated, 409 expanded
+[t=0.015400s, 12840 KB] New best heuristic value for ff: 48
+[t=0.015406s, 12840 KB] g=201, 908 evaluated, 410 expanded
+[t=0.015425s, 12840 KB] New best heuristic value for ff: 47
+[t=0.015431s, 12840 KB] g=202, 910 evaluated, 411 expanded
+[t=0.015451s, 12840 KB] New best heuristic value for ff: 46
+[t=0.015457s, 12840 KB] g=203, 912 evaluated, 412 expanded
+[t=0.015476s, 12840 KB] New best heuristic value for ff: 45
+[t=0.015482s, 12840 KB] g=204, 914 evaluated, 413 expanded
+[t=0.015504s, 12840 KB] New best heuristic value for ff: 44
+[t=0.015509s, 12840 KB] g=205, 916 evaluated, 414 expanded
+[t=0.015529s, 12840 KB] New best heuristic value for ff: 43
+[t=0.015535s, 12840 KB] g=206, 918 evaluated, 415 expanded
+[t=0.015554s, 12840 KB] New best heuristic value for ff: 42
+[t=0.015560s, 12840 KB] g=207, 920 evaluated, 416 expanded
+[t=0.015580s, 12840 KB] New best heuristic value for ff: 41
+[t=0.015586s, 12840 KB] g=208, 922 evaluated, 417 expanded
+[t=0.015605s, 12840 KB] New best heuristic value for ff: 40
+[t=0.015611s, 12840 KB] g=209, 924 evaluated, 418 expanded
+[t=0.015631s, 12840 KB] New best heuristic value for ff: 39
+[t=0.015636s, 12840 KB] g=210, 926 evaluated, 419 expanded
+[t=0.015656s, 12840 KB] New best heuristic value for ff: 38
+[t=0.015661s, 12840 KB] g=211, 928 evaluated, 420 expanded
+[t=0.015681s, 12840 KB] New best heuristic value for ff: 37
+[t=0.015686s, 12840 KB] g=212, 930 evaluated, 421 expanded
+[t=0.015705s, 12840 KB] New best heuristic value for ff: 36
+[t=0.015711s, 12840 KB] g=213, 932 evaluated, 422 expanded
+[t=0.015731s, 12840 KB] New best heuristic value for ff: 35
+[t=0.015736s, 12840 KB] g=214, 934 evaluated, 423 expanded
+[t=0.015755s, 12840 KB] New best heuristic value for ff: 34
+[t=0.015761s, 12840 KB] g=215, 936 evaluated, 424 expanded
+[t=0.015780s, 12840 KB] New best heuristic value for ff: 33
+[t=0.015786s, 12840 KB] g=216, 938 evaluated, 425 expanded
+[t=0.015805s, 12840 KB] New best heuristic value for ff: 32
+[t=0.015810s, 12840 KB] g=217, 940 evaluated, 426 expanded
+[t=0.015829s, 12840 KB] New best heuristic value for ff: 31
+[t=0.015834s, 12840 KB] g=218, 942 evaluated, 427 expanded
+[t=0.015852s, 12840 KB] New best heuristic value for ff: 30
+[t=0.015858s, 12840 KB] g=219, 944 evaluated, 428 expanded
+[t=0.015877s, 12840 KB] New best heuristic value for ff: 29
+[t=0.015882s, 12840 KB] g=220, 946 evaluated, 429 expanded
+[t=0.015901s, 12840 KB] New best heuristic value for ff: 28
+[t=0.015907s, 12840 KB] g=221, 948 evaluated, 430 expanded
+[t=0.015937s, 12840 KB] New best heuristic value for ff: 27
+[t=0.015943s, 12840 KB] g=222, 952 evaluated, 431 expanded
+[t=0.015960s, 12840 KB] New best heuristic value for ff: 26
+[t=0.015965s, 12840 KB] g=223, 954 evaluated, 432 expanded
+[t=0.015981s, 12840 KB] New best heuristic value for ff: 25
+[t=0.015986s, 12840 KB] g=224, 956 evaluated, 433 expanded
+[t=0.016002s, 12840 KB] New best heuristic value for ff: 24
+[t=0.016007s, 12840 KB] g=225, 958 evaluated, 434 expanded
+[t=0.016022s, 12840 KB] New best heuristic value for ff: 23
+[t=0.016028s, 12840 KB] g=226, 960 evaluated, 435 expanded
+[t=0.016043s, 12840 KB] New best heuristic value for ff: 22
+[t=0.016048s, 12840 KB] g=227, 962 evaluated, 436 expanded
+[t=0.016063s, 12840 KB] New best heuristic value for ff: 21
+[t=0.016068s, 12840 KB] g=228, 964 evaluated, 437 expanded
+[t=0.016082s, 12840 KB] New best heuristic value for ff: 20
+[t=0.016088s, 12840 KB] g=229, 966 evaluated, 438 expanded
+[t=0.016102s, 12840 KB] New best heuristic value for ff: 19
+[t=0.016107s, 12840 KB] g=230, 968 evaluated, 439 expanded
+[t=0.016121s, 12840 KB] New best heuristic value for ff: 18
+[t=0.016126s, 12840 KB] g=231, 970 evaluated, 440 expanded
+[t=0.016139s, 12840 KB] New best heuristic value for ff: 17
+[t=0.016145s, 12840 KB] g=232, 972 evaluated, 441 expanded
+[t=0.016157s, 12840 KB] New best heuristic value for ff: 16
+[t=0.016162s, 12840 KB] g=233, 974 evaluated, 442 expanded
+[t=0.016175s, 12840 KB] New best heuristic value for ff: 15
+[t=0.016180s, 12840 KB] g=234, 976 evaluated, 443 expanded
+[t=0.016193s, 12840 KB] New best heuristic value for ff: 14
+[t=0.016198s, 12840 KB] g=235, 978 evaluated, 444 expanded
+[t=0.016210s, 12840 KB] New best heuristic value for ff: 13
+[t=0.016215s, 12840 KB] g=236, 980 evaluated, 445 expanded
+[t=0.016227s, 12840 KB] New best heuristic value for ff: 12
+[t=0.016233s, 12840 KB] g=237, 982 evaluated, 446 expanded
+[t=0.016244s, 12840 KB] New best heuristic value for ff: 11
+[t=0.016249s, 12840 KB] g=238, 984 evaluated, 447 expanded
+[t=0.016260s, 12840 KB] New best heuristic value for ff: 10
+[t=0.016267s, 12840 KB] g=239, 986 evaluated, 448 expanded
+[t=0.016279s, 12840 KB] New best heuristic value for ff: 9
+[t=0.016284s, 12840 KB] g=240, 988 evaluated, 449 expanded
+[t=0.016296s, 12840 KB] New best heuristic value for ff: 8
+[t=0.016301s, 12840 KB] g=241, 990 evaluated, 450 expanded
+[t=0.016312s, 12840 KB] New best heuristic value for ff: 7
+[t=0.016318s, 12840 KB] g=242, 992 evaluated, 451 expanded
+[t=0.016329s, 12840 KB] New best heuristic value for ff: 6
+[t=0.016335s, 12840 KB] g=243, 994 evaluated, 452 expanded
+[t=0.016346s, 12840 KB] New best heuristic value for ff: 5
+[t=0.016352s, 12840 KB] g=244, 996 evaluated, 453 expanded
+[t=0.016362s, 12840 KB] New best heuristic value for ff: 4
+[t=0.016367s, 12840 KB] g=245, 998 evaluated, 454 expanded
+[t=0.016378s, 12840 KB] New best heuristic value for ff: 3
+[t=0.016384s, 12840 KB] g=246, 1000 evaluated, 455 expanded
+[t=0.016396s, 12840 KB] New best heuristic value for ff: 2
+[t=0.016401s, 12840 KB] g=247, 1002 evaluated, 456 expanded
+[t=0.016411s, 12840 KB] New best heuristic value for ff: 1
+[t=0.016417s, 12840 KB] g=248, 1004 evaluated, 457 expanded
+[t=0.016427s, 12840 KB] New best heuristic value for ff: 0
+[t=0.016432s, 12840 KB] g=249, 1006 evaluated, 458 expanded
+[t=0.016437s, 12840 KB] Solution found!
+[t=0.016445s, 12840 KB] Actual search time: 0.010816s
+drive waymo stop_0 stop_e_1 (1)
+drive waymo stop_e_1 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_17 (1)
+drive waymo stop_e_17 stop_e_18 (1)
+drive waymo stop_e_18 stop_e_19 (1)
+drive waymo stop_e_19 stop_e_20 (1)
+drive waymo stop_e_20 stop_e_21 (1)
+drive waymo stop_e_21 stop_e_22 (1)
+drive waymo stop_e_22 stop_e_23 (1)
+drive waymo stop_e_23 stop_e_24 (1)
+drive waymo stop_e_24 stop_e_25 (1)
+drive waymo stop_e_25 stop_e_26 (1)
+drive waymo stop_e_26 stop_e_27 (1)
+pickup waymo passenger_2 stop_e_27 (1)
+drive waymo stop_e_27 stop_e_26 (1)
+drive waymo stop_e_26 stop_e_25 (1)
+drive waymo stop_e_25 stop_e_24 (1)
+drive waymo stop_e_24 stop_e_23 (1)
+drive waymo stop_e_23 stop_e_22 (1)
+drive waymo stop_e_22 stop_e_21 (1)
+drive waymo stop_e_21 stop_e_20 (1)
+drive waymo stop_e_20 stop_e_19 (1)
+drive waymo stop_e_19 stop_e_18 (1)
+drive waymo stop_e_18 stop_e_17 (1)
+drive waymo stop_e_17 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_1 (1)
+drive waymo stop_e_1 stop_0 (1)
+drive waymo stop_0 stop_n_1 (1)
+drive waymo stop_n_1 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_16 (1)
+drive waymo stop_n_16 stop_n_17 (1)
+drive waymo stop_n_17 stop_n_18 (1)
+drive waymo stop_n_18 stop_n_19 (1)
+drive waymo stop_n_19 stop_n_20 (1)
+drive waymo stop_n_20 stop_n_21 (1)
+drive waymo stop_n_21 stop_n_22 (1)
+drive waymo stop_n_22 stop_n_23 (1)
+drive waymo stop_n_23 stop_n_24 (1)
+drive waymo stop_n_24 stop_n_25 (1)
+drive waymo stop_n_25 stop_n_26 (1)
+drive waymo stop_n_26 stop_n_27 (1)
+pickup waymo passenger_0 stop_n_27 (1)
+drive waymo stop_n_27 stop_n_26 (1)
+drive waymo stop_n_26 stop_n_25 (1)
+drive waymo stop_n_25 stop_n_24 (1)
+drive waymo stop_n_24 stop_n_23 (1)
+drive waymo stop_n_23 stop_n_22 (1)
+drive waymo stop_n_22 stop_n_21 (1)
+drive waymo stop_n_21 stop_n_20 (1)
+drive waymo stop_n_20 stop_n_19 (1)
+drive waymo stop_n_19 stop_n_18 (1)
+drive waymo stop_n_18 stop_n_17 (1)
+drive waymo stop_n_17 stop_n_16 (1)
+drive waymo stop_n_16 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_1 (1)
+drive waymo stop_n_1 stop_0 (1)
+drive waymo stop_0 stop_s_1 (1)
+drive waymo stop_s_1 stop_s_2 (1)
+drive waymo stop_s_2 stop_s_3 (1)
+drive waymo stop_s_3 stop_s_4 (1)
+drive waymo stop_s_4 stop_s_5 (1)
+drive waymo stop_s_5 stop_s_6 (1)
+drive waymo stop_s_6 stop_s_7 (1)
+drive waymo stop_s_7 stop_s_8 (1)
+drive waymo stop_s_8 stop_s_9 (1)
+drive waymo stop_s_9 stop_s_10 (1)
+drive waymo stop_s_10 stop_s_11 (1)
+drive waymo stop_s_11 stop_s_12 (1)
+drive waymo stop_s_12 stop_s_13 (1)
+drive waymo stop_s_13 stop_s_14 (1)
+drive waymo stop_s_14 stop_s_15 (1)
+drive waymo stop_s_15 stop_s_16 (1)
+drive waymo stop_s_16 stop_s_17 (1)
+drive waymo stop_s_17 stop_s_18 (1)
+drive waymo stop_s_18 stop_s_19 (1)
+drive waymo stop_s_19 stop_s_20 (1)
+drive waymo stop_s_20 stop_s_21 (1)
+drive waymo stop_s_21 stop_s_22 (1)
+drive waymo stop_s_22 stop_s_23 (1)
+drive waymo stop_s_23 stop_s_24 (1)
+drive waymo stop_s_24 stop_s_25 (1)
+drive waymo stop_s_25 stop_s_26 (1)
+drive waymo stop_s_26 stop_s_27 (1)
+pickup waymo passenger_1 stop_s_27 (1)
+dropoff waymo passenger_0 stop_s_27 (1)
+drive waymo stop_s_27 stop_s_26 (1)
+drive waymo stop_s_26 stop_s_25 (1)
+drive waymo stop_s_25 stop_s_24 (1)
+drive waymo stop_s_24 stop_s_23 (1)
+drive waymo stop_s_23 stop_s_22 (1)
+drive waymo stop_s_22 stop_s_21 (1)
+drive waymo stop_s_21 stop_s_20 (1)
+drive waymo stop_s_20 stop_s_19 (1)
+drive waymo stop_s_19 stop_s_18 (1)
+drive waymo stop_s_18 stop_s_17 (1)
+drive waymo stop_s_17 stop_s_16 (1)
+drive waymo stop_s_16 stop_s_15 (1)
+drive waymo stop_s_15 stop_s_14 (1)
+drive waymo stop_s_14 stop_s_13 (1)
+drive waymo stop_s_13 stop_s_12 (1)
+drive waymo stop_s_12 stop_s_11 (1)
+drive waymo stop_s_11 stop_s_10 (1)
+drive waymo stop_s_10 stop_s_9 (1)
+drive waymo stop_s_9 stop_s_8 (1)
+drive waymo stop_s_8 stop_s_7 (1)
+drive waymo stop_s_7 stop_s_6 (1)
+drive waymo stop_s_6 stop_s_5 (1)
+drive waymo stop_s_5 stop_s_4 (1)
+drive waymo stop_s_4 stop_s_3 (1)
+drive waymo stop_s_3 stop_s_2 (1)
+drive waymo stop_s_2 stop_s_1 (1)
+drive waymo stop_s_1 stop_0 (1)
+drive waymo stop_0 stop_e_1 (1)
+drive waymo stop_e_1 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_17 (1)
+drive waymo stop_e_17 stop_e_18 (1)
+drive waymo stop_e_18 stop_e_19 (1)
+drive waymo stop_e_19 stop_e_20 (1)
+drive waymo stop_e_20 stop_e_21 (1)
+drive waymo stop_e_21 stop_e_22 (1)
+drive waymo stop_e_22 stop_e_23 (1)
+drive waymo stop_e_23 stop_e_24 (1)
+drive waymo stop_e_24 stop_e_25 (1)
+drive waymo stop_e_25 stop_e_26 (1)
+drive waymo stop_e_26 stop_e_27 (1)
+dropoff waymo passenger_1 stop_e_27 (1)
+drive waymo stop_e_27 stop_e_26 (1)
+drive waymo stop_e_26 stop_e_25 (1)
+drive waymo stop_e_25 stop_e_24 (1)
+drive waymo stop_e_24 stop_e_23 (1)
+drive waymo stop_e_23 stop_e_22 (1)
+drive waymo stop_e_22 stop_e_21 (1)
+drive waymo stop_e_21 stop_e_20 (1)
+drive waymo stop_e_20 stop_e_19 (1)
+drive waymo stop_e_19 stop_e_18 (1)
+drive waymo stop_e_18 stop_e_17 (1)
+drive waymo stop_e_17 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_1 (1)
+drive waymo stop_e_1 stop_0 (1)
+drive waymo stop_0 stop_w_1 (1)
+drive waymo stop_w_1 stop_w_2 (1)
+drive waymo stop_w_2 stop_w_3 (1)
+drive waymo stop_w_3 stop_w_4 (1)
+drive waymo stop_w_4 stop_w_5 (1)
+drive waymo stop_w_5 stop_w_6 (1)
+drive waymo stop_w_6 stop_w_7 (1)
+drive waymo stop_w_7 stop_w_8 (1)
+drive waymo stop_w_8 stop_w_9 (1)
+drive waymo stop_w_9 stop_w_10 (1)
+drive waymo stop_w_10 stop_w_11 (1)
+drive waymo stop_w_11 stop_w_12 (1)
+drive waymo stop_w_12 stop_w_13 (1)
+drive waymo stop_w_13 stop_w_14 (1)
+drive waymo stop_w_14 stop_w_15 (1)
+drive waymo stop_w_15 stop_w_16 (1)
+drive waymo stop_w_16 stop_w_17 (1)
+drive waymo stop_w_17 stop_w_18 (1)
+drive waymo stop_w_18 stop_w_19 (1)
+drive waymo stop_w_19 stop_w_20 (1)
+drive waymo stop_w_20 stop_w_21 (1)
+drive waymo stop_w_21 stop_w_22 (1)
+drive waymo stop_w_22 stop_w_23 (1)
+drive waymo stop_w_23 stop_w_24 (1)
+drive waymo stop_w_24 stop_w_25 (1)
+drive waymo stop_w_25 stop_w_26 (1)
+drive waymo stop_w_26 stop_w_27 (1)
+dropoff waymo passenger_2 stop_w_27 (1)
+[t=0.016451s, 12840 KB] Plan length: 249 step(s).
+[t=0.016451s, 12840 KB] Plan cost: 249
+[t=0.016451s, 12840 KB] Expanded 459 state(s).
+[t=0.016451s, 12840 KB] Reopened 0 state(s).
+[t=0.016451s, 12840 KB] Evaluated 1006 state(s).
+[t=0.016451s, 12840 KB] Evaluations: 1006
+[t=0.016451s, 12840 KB] Generated 1463 state(s).
+[t=0.016451s, 12840 KB] Dead ends: 0 state(s).
+[t=0.016451s, 12840 KB] Number of registered states: 1006
+[t=0.016451s, 12840 KB] Int hash set load factor: 1006/1024 = 0.982422
+[t=0.016451s, 12840 KB] Int hash set resizes: 10
+[t=0.016451s, 12840 KB] Search time: 0.010909s
+[t=0.016451s, 12840 KB] Total time: 0.016451s
+Solution found.
+Peak memory: 12840 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 0.17s
