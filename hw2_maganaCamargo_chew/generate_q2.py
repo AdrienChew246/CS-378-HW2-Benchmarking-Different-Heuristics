@@ -9,8 +9,9 @@ def generate_q2_waymo(directory="q2"):
 
     DOMAIN_NAME = "waymo_2_electric_boogaloo"
 
+    # Size
     for i in range(1, 6):
-        leg_length = 3**i 
+        leg_length = 2**i 
         problem = Problem(DOMAIN_NAME)
         
         # Types
@@ -60,7 +61,7 @@ def generate_q2_waymo(directory="q2"):
         
         # Create 4 legs (North, South, East, West)
         legs = []
-        for direction in ["n", "s", "e", "w"]:
+        for direction in ["n", "s", "e"]:
             leg_nodes = [Object(f"stop_{direction}_{j}", Location) for j in range(1, leg_length + 1)]
             problem.add_objects(leg_nodes)
             legs.append(leg_nodes)
@@ -85,8 +86,8 @@ def generate_q2_waymo(directory="q2"):
             problem.add_object(p_obj)
 
             # Start pos
-            start_leg = legs[p_idx % 4]
-            end_leg = legs[(p_idx + 1) % 4]
+            start_leg = legs[p_idx % 3]
+            end_leg = legs[(p_idx + 1) % 3]
             
             problem.set_initial_value(passenger_at(p_obj, start_leg[-1]), True)
             problem.add_goal(passenger_at(p_obj, end_leg[-1]))
