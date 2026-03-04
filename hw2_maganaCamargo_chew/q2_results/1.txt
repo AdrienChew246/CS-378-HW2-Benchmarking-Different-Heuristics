@@ -7,21 +7,21 @@ INFO     translator time limit: None
 INFO     translator memory limit: None
 INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q2/domain.pddl q2/problem1.pddl --sas-file output.sas
 Parsing...
-Parsing: [0.000s CPU, 0.002s wall-clock]
+Parsing: [0.000s CPU, 0.004s wall-clock]
 Normalizing task... [0.000s CPU, 0.000s wall-clock]
 Instantiating...
 Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
 Normalizing Datalog program...
-Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
 Preparing model... [0.000s CPU, 0.000s wall-clock]
 Generated 16 rules.
-Computing model... [0.000s CPU, 0.001s wall-clock]
-147 relevant atoms
-127 auxiliary atoms
-274 final queue length
-299 total queue pushes
-Completing instantiation... [0.010s CPU, 0.000s wall-clock]
-Instantiating: [0.010s CPU, 0.004s wall-clock]
+Computing model... [0.000s CPU, 0.000s wall-clock]
+81 relevant atoms
+67 auxiliary atoms
+148 final queue length
+161 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.000s CPU, 0.005s wall-clock]
 Computing fact groups...
 Finding invariants...
 9 initial candidates
@@ -43,7 +43,7 @@ Processing axioms...
 Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
 Translator axioms removed by simplifying: 0
 Processing axioms: [0.000s CPU, 0.000s wall-clock]
-Translating task: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.000s wall-clock]
 0 effect conditions simplified
 0 implied preconditions added
 Detecting unreachable propositions...
@@ -54,21 +54,21 @@ Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
 Reordering and filtering variables...
 2 of 2 variables necessary.
 0 of 2 mutex groups necessary.
-50 of 50 operators necessary.
+26 of 26 operators necessary.
 0 of 0 axiom rules necessary.
 Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
 Translator variables: 2
 Translator derived variables: 0
-Translator facts: 27
+Translator facts: 15
 Translator goal facts: 1
 Translator mutex groups: 0
 Translator total mutex groups size: 0
-Translator operators: 50
+Translator operators: 26
 Translator axioms: 0
-Translator task size: 206
-Translator peak memory: 32668 KB
+Translator task size: 110
+Translator peak memory: 32664 KB
 Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.010s CPU, 0.010s wall-clock]
+Done! [0.010s CPU, 0.013s wall-clock]
 translate exit code: 0
 
 INFO     Running search (release).
@@ -76,67 +76,60 @@ INFO     search stdin: output.sas
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas
-[t=0.000799s, 12132 KB] reading input...
-[t=0.001165s, 12132 KB] done reading input!
-[t=0.002835s, 12396 KB] Simplifying 50 unary operators... done! [50 unary operators]
-[t=0.002895s, 12396 KB] time to simplify: 0.000070s
-[t=0.002907s, 12396 KB] Initializing additive heuristic...
-[t=0.002913s, 12396 KB] Initializing FF heuristic...
-[t=0.002928s, 12396 KB] Building successor generator...done!
-[t=0.002954s, 12396 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.002960s, 12396 KB] time for successor generation creation: 0.000011s
-[t=0.002966s, 12396 KB] Variables: 2
-[t=0.002971s, 12396 KB] FactPairs: 27
-[t=0.002976s, 12396 KB] Bytes per state: 4
-[t=0.002986s, 12396 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
-[t=0.003001s, 12396 KB] New best heuristic value for ff: 8
-[t=0.003008s, 12396 KB] g=0, 1 evaluated, 0 expanded
-[t=0.003015s, 12396 KB] Initial heuristic value for ff: 8
-[t=0.003022s, 12396 KB] pruning method: none
-[t=0.003045s, 12396 KB] New best heuristic value for ff: 7
-[t=0.003057s, 12396 KB] g=4, 10 evaluated, 6 expanded
-[t=0.003064s, 12396 KB] New best heuristic value for ff: 6
-[t=0.003070s, 12396 KB] g=5, 11 evaluated, 7 expanded
-[t=0.003077s, 12396 KB] New best heuristic value for ff: 5
-[t=0.003082s, 12396 KB] g=6, 12 evaluated, 8 expanded
-[t=0.003090s, 12396 KB] New best heuristic value for ff: 4
-[t=0.003095s, 12396 KB] g=7, 14 evaluated, 9 expanded
-[t=0.003105s, 12396 KB] New best heuristic value for ff: 3
-[t=0.003111s, 12396 KB] g=8, 17 evaluated, 10 expanded
-[t=0.003119s, 12396 KB] New best heuristic value for ff: 2
-[t=0.003124s, 12396 KB] g=9, 20 evaluated, 11 expanded
-[t=0.003132s, 12396 KB] New best heuristic value for ff: 1
-[t=0.003137s, 12396 KB] g=10, 22 evaluated, 12 expanded
-[t=0.003144s, 12396 KB] New best heuristic value for ff: 0
-[t=0.003150s, 12396 KB] g=11, 24 evaluated, 13 expanded
-[t=0.003155s, 12396 KB] Solution found!
-[t=0.003161s, 12396 KB] Actual search time: 0.000138s
+[t=0.000950s, 12128 KB] reading input...
+[t=0.001452s, 12128 KB] done reading input!
+[t=0.003626s, 12392 KB] Simplifying 26 unary operators... done! [26 unary operators]
+[t=0.003736s, 12392 KB] time to simplify: 0.000128s
+[t=0.003757s, 12392 KB] Initializing additive heuristic...
+[t=0.003769s, 12392 KB] Initializing FF heuristic...
+[t=0.003794s, 12392 KB] Building successor generator...done!
+[t=0.003837s, 12392 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.003848s, 12392 KB] time for successor generation creation: 0.000013s
+[t=0.003861s, 12392 KB] Variables: 2
+[t=0.003871s, 12392 KB] FactPairs: 15
+[t=0.003881s, 12392 KB] Bytes per state: 4
+[t=0.003900s, 12392 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.003928s, 12392 KB] New best heuristic value for ff: 6
+[t=0.003946s, 12392 KB] g=0, 1 evaluated, 0 expanded
+[t=0.003959s, 12392 KB] Initial heuristic value for ff: 6
+[t=0.003975s, 12392 KB] pruning method: none
+[t=0.004001s, 12392 KB] New best heuristic value for ff: 5
+[t=0.004028s, 12392 KB] g=3, 7 evaluated, 4 expanded
+[t=0.004043s, 12392 KB] New best heuristic value for ff: 4
+[t=0.004054s, 12392 KB] g=4, 8 evaluated, 5 expanded
+[t=0.004067s, 12392 KB] New best heuristic value for ff: 3
+[t=0.004079s, 12392 KB] g=5, 9 evaluated, 6 expanded
+[t=0.004095s, 12392 KB] New best heuristic value for ff: 2
+[t=0.004105s, 12392 KB] g=6, 12 evaluated, 7 expanded
+[t=0.004120s, 12392 KB] New best heuristic value for ff: 1
+[t=0.004131s, 12392 KB] g=7, 14 evaluated, 8 expanded
+[t=0.004144s, 12392 KB] New best heuristic value for ff: 0
+[t=0.004156s, 12392 KB] g=8, 16 evaluated, 9 expanded
+[t=0.004167s, 12392 KB] Solution found!
+[t=0.004178s, 12392 KB] Actual search time: 0.000201s
 drive waymo stop_0 stop_n_1 (1)
 drive waymo stop_n_1 stop_n_2 (1)
-drive waymo stop_n_2 stop_n_3 (1)
-pickup waymo passenger_0 stop_n_3 (1)
-drive waymo stop_n_3 stop_n_2 (1)
+pickup waymo passenger_0 stop_n_2 (1)
 drive waymo stop_n_2 stop_n_1 (1)
 drive waymo stop_n_1 stop_0 (1)
 drive waymo stop_0 stop_s_1 (1)
 drive waymo stop_s_1 stop_s_2 (1)
-drive waymo stop_s_2 stop_s_3 (1)
-dropoff waymo passenger_0 stop_s_3 (1)
-[t=0.003166s, 12396 KB] Plan length: 11 step(s).
-[t=0.003166s, 12396 KB] Plan cost: 11
-[t=0.003166s, 12396 KB] Expanded 14 state(s).
-[t=0.003166s, 12396 KB] Reopened 0 state(s).
-[t=0.003166s, 12396 KB] Evaluated 24 state(s).
-[t=0.003166s, 12396 KB] Evaluations: 24
-[t=0.003166s, 12396 KB] Generated 35 state(s).
-[t=0.003166s, 12396 KB] Dead ends: 0 state(s).
-[t=0.003166s, 12396 KB] Number of registered states: 24
-[t=0.003166s, 12396 KB] Int hash set load factor: 24/32 = 0.750000
-[t=0.003166s, 12396 KB] Int hash set resizes: 5
-[t=0.003166s, 12396 KB] Search time: 0.000181s
-[t=0.003166s, 12396 KB] Total time: 0.003166s
+dropoff waymo passenger_0 stop_s_2 (1)
+[t=0.004190s, 12392 KB] Plan length: 8 step(s).
+[t=0.004190s, 12392 KB] Plan cost: 8
+[t=0.004190s, 12392 KB] Expanded 10 state(s).
+[t=0.004190s, 12392 KB] Reopened 0 state(s).
+[t=0.004190s, 12392 KB] Evaluated 16 state(s).
+[t=0.004190s, 12392 KB] Evaluations: 16
+[t=0.004190s, 12392 KB] Generated 23 state(s).
+[t=0.004190s, 12392 KB] Dead ends: 0 state(s).
+[t=0.004190s, 12392 KB] Number of registered states: 16
+[t=0.004190s, 12392 KB] Int hash set load factor: 16/16 = 1.000000
+[t=0.004190s, 12392 KB] Int hash set resizes: 4
+[t=0.004190s, 12392 KB] Search time: 0.000290s
+[t=0.004190s, 12392 KB] Total time: 0.004190s
 Solution found.
-Peak memory: 12396 KB
+Peak memory: 12392 KB
 Remove intermediate file output.sas
 search exit code: 0
 

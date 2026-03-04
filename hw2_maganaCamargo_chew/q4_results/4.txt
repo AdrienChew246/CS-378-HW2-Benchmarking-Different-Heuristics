@@ -1,0 +1,591 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q4/domain.pddl q4/problem4.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 16 rules.
+Computing model... [0.010s CPU, 0.004s wall-clock]
+996 relevant atoms
+637 auxiliary atoms
+1633 final queue length
+1877 total queue pushes
+Completing instantiation... [0.000s CPU, 0.003s wall-clock]
+Instantiating: [0.010s CPU, 0.012s wall-clock]
+Computing fact groups...
+Finding invariants...
+9 initial candidates
+Finding invariants: [0.000s CPU, 0.000s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.004s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+5 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.002s wall-clock]
+Reordering and filtering variables...
+5 of 5 variables necessary.
+0 of 5 mutex groups necessary.
+488 of 488 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 5
+Translator derived variables: 0
+Translator facts: 249
+Translator goal facts: 4
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 488
+Translator axioms: 0
+Translator task size: 2114
+Translator peak memory: 33688 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.025s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([cg()])' --internal-plan-file sas_plan < output.sas
+[t=0.000794s, 12128 KB] reading input...
+[t=0.003028s, 12260 KB] done reading input!
+[t=0.004779s, 12524 KB] Initializing causal graph heuristic...
+[t=0.004867s, 12524 KB] Initializing heuristic cache... building causal graph...done! [t=0.000016s]
+[t=0.006438s, 18304 KB] done!
+[t=0.006598s, 18304 KB] Building successor generator...done!
+[t=0.006701s, 18304 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.006707s, 18304 KB] time for successor generation creation: 0.000078s
+[t=0.006714s, 18304 KB] Variables: 5
+[t=0.006721s, 18304 KB] FactPairs: 249
+[t=0.006727s, 18304 KB] Bytes per state: 4
+[t=0.006740s, 18304 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.006778s, 18304 KB] New best heuristic value for cg: 200
+[t=0.006784s, 18304 KB] g=0, 1 evaluated, 0 expanded
+[t=0.006791s, 18304 KB] Initial heuristic value for cg: 200
+[t=0.006797s, 18304 KB] pruning method: none
+[t=0.007009s, 18304 KB] New best heuristic value for cg: 199
+[t=0.007016s, 18304 KB] g=17, 20 evaluated, 17 expanded
+[t=0.007043s, 18304 KB] New best heuristic value for cg: 197
+[t=0.007052s, 18304 KB] g=18, 22 evaluated, 18 expanded
+[t=0.007067s, 18304 KB] New best heuristic value for cg: 195
+[t=0.007075s, 18304 KB] g=19, 24 evaluated, 19 expanded
+[t=0.007094s, 18304 KB] New best heuristic value for cg: 193
+[t=0.007102s, 18304 KB] g=20, 26 evaluated, 20 expanded
+[t=0.007118s, 18304 KB] New best heuristic value for cg: 191
+[t=0.007126s, 18304 KB] g=21, 28 evaluated, 21 expanded
+[t=0.007142s, 18304 KB] New best heuristic value for cg: 189
+[t=0.007147s, 18304 KB] g=22, 30 evaluated, 22 expanded
+[t=0.007159s, 18304 KB] New best heuristic value for cg: 187
+[t=0.007165s, 18304 KB] g=23, 32 evaluated, 23 expanded
+[t=0.007179s, 18304 KB] New best heuristic value for cg: 185
+[t=0.007184s, 18304 KB] g=24, 34 evaluated, 24 expanded
+[t=0.007196s, 18304 KB] New best heuristic value for cg: 183
+[t=0.007202s, 18304 KB] g=25, 36 evaluated, 25 expanded
+[t=0.007214s, 18304 KB] New best heuristic value for cg: 181
+[t=0.007221s, 18304 KB] g=26, 38 evaluated, 26 expanded
+[t=0.007236s, 18304 KB] New best heuristic value for cg: 179
+[t=0.007242s, 18304 KB] g=27, 40 evaluated, 27 expanded
+[t=0.007257s, 18304 KB] New best heuristic value for cg: 177
+[t=0.007263s, 18304 KB] g=28, 42 evaluated, 28 expanded
+[t=0.007275s, 18304 KB] New best heuristic value for cg: 175
+[t=0.007282s, 18304 KB] g=29, 44 evaluated, 29 expanded
+[t=0.007303s, 18304 KB] New best heuristic value for cg: 173
+[t=0.007313s, 18304 KB] g=30, 46 evaluated, 30 expanded
+[t=0.007333s, 18304 KB] New best heuristic value for cg: 171
+[t=0.007342s, 18304 KB] g=31, 48 evaluated, 31 expanded
+[t=0.007361s, 18304 KB] New best heuristic value for cg: 169
+[t=0.007370s, 18304 KB] g=32, 50 evaluated, 32 expanded
+[t=0.007389s, 18304 KB] New best heuristic value for cg: 167
+[t=0.007396s, 18304 KB] g=33, 52 evaluated, 33 expanded
+[t=0.007629s, 18304 KB] New best heuristic value for cg: 166
+[t=0.007639s, 18304 KB] g=50, 87 evaluated, 50 expanded
+[t=0.007648s, 18304 KB] New best heuristic value for cg: 165
+[t=0.007654s, 18304 KB] g=51, 89 evaluated, 51 expanded
+[t=0.007661s, 18304 KB] New best heuristic value for cg: 164
+[t=0.007666s, 18304 KB] g=52, 91 evaluated, 52 expanded
+[t=0.007672s, 18304 KB] New best heuristic value for cg: 163
+[t=0.007678s, 18304 KB] g=53, 92 evaluated, 53 expanded
+[t=0.007684s, 18304 KB] New best heuristic value for cg: 162
+[t=0.007689s, 18304 KB] g=54, 93 evaluated, 54 expanded
+[t=0.007695s, 18304 KB] New best heuristic value for cg: 161
+[t=0.007700s, 18304 KB] g=55, 94 evaluated, 55 expanded
+[t=0.007706s, 18304 KB] New best heuristic value for cg: 160
+[t=0.007711s, 18304 KB] g=56, 95 evaluated, 56 expanded
+[t=0.007717s, 18304 KB] New best heuristic value for cg: 159
+[t=0.007722s, 18304 KB] g=57, 96 evaluated, 57 expanded
+[t=0.007728s, 18304 KB] New best heuristic value for cg: 158
+[t=0.007734s, 18304 KB] g=58, 97 evaluated, 58 expanded
+[t=0.007740s, 18304 KB] New best heuristic value for cg: 157
+[t=0.007745s, 18304 KB] g=59, 98 evaluated, 59 expanded
+[t=0.007751s, 18304 KB] New best heuristic value for cg: 156
+[t=0.007757s, 18304 KB] g=60, 99 evaluated, 60 expanded
+[t=0.007763s, 18304 KB] New best heuristic value for cg: 155
+[t=0.007768s, 18304 KB] g=61, 100 evaluated, 61 expanded
+[t=0.007774s, 18304 KB] New best heuristic value for cg: 154
+[t=0.007779s, 18304 KB] g=62, 101 evaluated, 62 expanded
+[t=0.007785s, 18304 KB] New best heuristic value for cg: 153
+[t=0.007790s, 18304 KB] g=63, 102 evaluated, 63 expanded
+[t=0.007797s, 18304 KB] New best heuristic value for cg: 152
+[t=0.007802s, 18304 KB] g=64, 103 evaluated, 64 expanded
+[t=0.007808s, 18304 KB] New best heuristic value for cg: 151
+[t=0.007813s, 18304 KB] g=65, 104 evaluated, 65 expanded
+[t=0.007820s, 18304 KB] New best heuristic value for cg: 150
+[t=0.007825s, 18304 KB] g=66, 105 evaluated, 66 expanded
+[t=0.007994s, 18304 KB] New best heuristic value for cg: 147
+[t=0.008001s, 18304 KB] g=57, 145 evaluated, 101 expanded
+[t=0.008012s, 18304 KB] New best heuristic value for cg: 144
+[t=0.008019s, 18304 KB] g=58, 147 evaluated, 102 expanded
+[t=0.008030s, 18304 KB] New best heuristic value for cg: 141
+[t=0.008037s, 18304 KB] g=59, 149 evaluated, 103 expanded
+[t=0.008047s, 18304 KB] New best heuristic value for cg: 138
+[t=0.008054s, 18304 KB] g=60, 151 evaluated, 104 expanded
+[t=0.008064s, 18304 KB] New best heuristic value for cg: 135
+[t=0.008069s, 18304 KB] g=61, 153 evaluated, 105 expanded
+[t=0.008080s, 18304 KB] New best heuristic value for cg: 132
+[t=0.008085s, 18304 KB] g=62, 155 evaluated, 106 expanded
+[t=0.008095s, 18304 KB] New best heuristic value for cg: 129
+[t=0.008102s, 18304 KB] g=63, 157 evaluated, 107 expanded
+[t=0.008112s, 18304 KB] New best heuristic value for cg: 126
+[t=0.008118s, 18304 KB] g=64, 159 evaluated, 108 expanded
+[t=0.008129s, 18304 KB] New best heuristic value for cg: 123
+[t=0.008134s, 18304 KB] g=65, 161 evaluated, 109 expanded
+[t=0.008144s, 18304 KB] New best heuristic value for cg: 120
+[t=0.008151s, 18304 KB] g=66, 163 evaluated, 110 expanded
+[t=0.008161s, 18304 KB] New best heuristic value for cg: 117
+[t=0.008166s, 18304 KB] g=67, 165 evaluated, 111 expanded
+[t=0.008177s, 18304 KB] New best heuristic value for cg: 116
+[t=0.008183s, 18304 KB] g=68, 167 evaluated, 112 expanded
+[t=0.008196s, 18304 KB] New best heuristic value for cg: 115
+[t=0.008202s, 18304 KB] g=69, 170 evaluated, 113 expanded
+[t=0.008213s, 18304 KB] New best heuristic value for cg: 114
+[t=0.008218s, 18304 KB] g=70, 172 evaluated, 114 expanded
+[t=0.008228s, 18304 KB] New best heuristic value for cg: 113
+[t=0.008234s, 18304 KB] g=71, 174 evaluated, 115 expanded
+[t=0.008244s, 18304 KB] New best heuristic value for cg: 112
+[t=0.008251s, 18304 KB] g=72, 176 evaluated, 116 expanded
+[t=0.008261s, 18304 KB] New best heuristic value for cg: 111
+[t=0.008266s, 18304 KB] g=73, 178 evaluated, 117 expanded
+[t=0.008277s, 18304 KB] New best heuristic value for cg: 110
+[t=0.008282s, 18304 KB] g=74, 180 evaluated, 118 expanded
+[t=0.008293s, 18304 KB] New best heuristic value for cg: 109
+[t=0.008299s, 18304 KB] g=75, 182 evaluated, 119 expanded
+[t=0.008310s, 18304 KB] New best heuristic value for cg: 108
+[t=0.008315s, 18304 KB] g=76, 184 evaluated, 120 expanded
+[t=0.008326s, 18304 KB] New best heuristic value for cg: 107
+[t=0.008331s, 18304 KB] g=77, 186 evaluated, 121 expanded
+[t=0.008342s, 18304 KB] New best heuristic value for cg: 106
+[t=0.008348s, 18304 KB] g=78, 188 evaluated, 122 expanded
+[t=0.008359s, 18304 KB] New best heuristic value for cg: 105
+[t=0.008364s, 18304 KB] g=79, 190 evaluated, 123 expanded
+[t=0.008374s, 18304 KB] New best heuristic value for cg: 104
+[t=0.008380s, 18304 KB] g=80, 192 evaluated, 124 expanded
+[t=0.008390s, 18304 KB] New best heuristic value for cg: 103
+[t=0.008397s, 18304 KB] g=81, 194 evaluated, 125 expanded
+[t=0.008408s, 18304 KB] New best heuristic value for cg: 102
+[t=0.008417s, 18304 KB] g=82, 196 evaluated, 126 expanded
+[t=0.008436s, 18304 KB] New best heuristic value for cg: 101
+[t=0.008442s, 18304 KB] g=83, 198 evaluated, 127 expanded
+[t=0.008453s, 18304 KB] New best heuristic value for cg: 100
+[t=0.008460s, 18304 KB] g=84, 200 evaluated, 128 expanded
+[t=0.008469s, 18304 KB] New best heuristic value for cg: 99
+[t=0.008474s, 18304 KB] g=85, 202 evaluated, 129 expanded
+[t=0.008484s, 18304 KB] New best heuristic value for cg: 98
+[t=0.008489s, 18304 KB] g=86, 204 evaluated, 130 expanded
+[t=0.008500s, 18304 KB] New best heuristic value for cg: 97
+[t=0.008506s, 18304 KB] g=87, 207 evaluated, 131 expanded
+[t=0.008517s, 18304 KB] New best heuristic value for cg: 96
+[t=0.008523s, 18304 KB] g=88, 210 evaluated, 132 expanded
+[t=0.008534s, 18428 KB] New best heuristic value for cg: 95
+[t=0.008548s, 18428 KB] g=89, 213 evaluated, 133 expanded
+[t=0.008559s, 18428 KB] New best heuristic value for cg: 94
+[t=0.008565s, 18428 KB] g=90, 216 evaluated, 134 expanded
+[t=0.008576s, 18428 KB] New best heuristic value for cg: 93
+[t=0.008581s, 18428 KB] g=91, 219 evaluated, 135 expanded
+[t=0.008593s, 18428 KB] New best heuristic value for cg: 92
+[t=0.008599s, 18428 KB] g=92, 222 evaluated, 136 expanded
+[t=0.008611s, 18428 KB] New best heuristic value for cg: 91
+[t=0.008617s, 18428 KB] g=93, 225 evaluated, 137 expanded
+[t=0.008628s, 18428 KB] New best heuristic value for cg: 90
+[t=0.008634s, 18428 KB] g=94, 228 evaluated, 138 expanded
+[t=0.008645s, 18428 KB] New best heuristic value for cg: 89
+[t=0.008654s, 18428 KB] g=95, 231 evaluated, 139 expanded
+[t=0.008666s, 18428 KB] New best heuristic value for cg: 88
+[t=0.008671s, 18428 KB] g=96, 234 evaluated, 140 expanded
+[t=0.008682s, 18428 KB] New best heuristic value for cg: 87
+[t=0.008687s, 18428 KB] g=97, 237 evaluated, 141 expanded
+[t=0.008699s, 18428 KB] New best heuristic value for cg: 86
+[t=0.008705s, 18428 KB] g=98, 240 evaluated, 142 expanded
+[t=0.008717s, 18428 KB] New best heuristic value for cg: 85
+[t=0.008722s, 18428 KB] g=99, 243 evaluated, 143 expanded
+[t=0.008733s, 18428 KB] New best heuristic value for cg: 84
+[t=0.008739s, 18428 KB] g=100, 246 evaluated, 144 expanded
+[t=0.008750s, 18428 KB] New best heuristic value for cg: 83
+[t=0.008757s, 18428 KB] g=101, 249 evaluated, 145 expanded
+[t=0.008773s, 18428 KB] New best heuristic value for cg: 82
+[t=0.008778s, 18428 KB] g=102, 253 evaluated, 146 expanded
+[t=0.008793s, 18428 KB] New best heuristic value for cg: 81
+[t=0.008799s, 18428 KB] g=103, 256 evaluated, 147 expanded
+[t=0.008826s, 18428 KB] New best heuristic value for cg: 80
+[t=0.008833s, 18428 KB] g=104, 259 evaluated, 148 expanded
+[t=0.008848s, 18428 KB] New best heuristic value for cg: 79
+[t=0.008854s, 18428 KB] g=105, 262 evaluated, 149 expanded
+[t=0.008870s, 18428 KB] New best heuristic value for cg: 78
+[t=0.008875s, 18428 KB] g=106, 265 evaluated, 150 expanded
+[t=0.008890s, 18428 KB] New best heuristic value for cg: 77
+[t=0.008897s, 18428 KB] g=107, 268 evaluated, 151 expanded
+[t=0.008912s, 18428 KB] New best heuristic value for cg: 76
+[t=0.008917s, 18428 KB] g=108, 271 evaluated, 152 expanded
+[t=0.008933s, 18428 KB] New best heuristic value for cg: 75
+[t=0.008939s, 18428 KB] g=109, 274 evaluated, 153 expanded
+[t=0.008954s, 18428 KB] New best heuristic value for cg: 74
+[t=0.008959s, 18428 KB] g=110, 277 evaluated, 154 expanded
+[t=0.008975s, 18428 KB] New best heuristic value for cg: 73
+[t=0.008981s, 18428 KB] g=111, 280 evaluated, 155 expanded
+[t=0.008997s, 18428 KB] New best heuristic value for cg: 72
+[t=0.009002s, 18428 KB] g=112, 283 evaluated, 156 expanded
+[t=0.009018s, 18428 KB] New best heuristic value for cg: 71
+[t=0.009024s, 18428 KB] g=113, 286 evaluated, 157 expanded
+[t=0.009040s, 18428 KB] New best heuristic value for cg: 70
+[t=0.009045s, 18428 KB] g=114, 289 evaluated, 158 expanded
+[t=0.009061s, 18428 KB] New best heuristic value for cg: 69
+[t=0.009068s, 18428 KB] g=115, 292 evaluated, 159 expanded
+[t=0.009083s, 18428 KB] New best heuristic value for cg: 68
+[t=0.009089s, 18428 KB] g=116, 295 evaluated, 160 expanded
+[t=0.009101s, 18428 KB] New best heuristic value for cg: 67
+[t=0.009107s, 18428 KB] g=117, 298 evaluated, 161 expanded
+[t=0.009119s, 18428 KB] New best heuristic value for cg: 66
+[t=0.009124s, 18428 KB] g=118, 303 evaluated, 162 expanded
+[t=0.009133s, 18428 KB] New best heuristic value for cg: 64
+[t=0.009138s, 18428 KB] g=119, 304 evaluated, 163 expanded
+[t=0.009147s, 18428 KB] New best heuristic value for cg: 62
+[t=0.009152s, 18428 KB] g=120, 306 evaluated, 164 expanded
+[t=0.009163s, 18428 KB] New best heuristic value for cg: 60
+[t=0.009170s, 18428 KB] g=121, 309 evaluated, 165 expanded
+[t=0.009182s, 18428 KB] New best heuristic value for cg: 58
+[t=0.009187s, 18428 KB] g=122, 312 evaluated, 166 expanded
+[t=0.009198s, 18428 KB] New best heuristic value for cg: 56
+[t=0.009204s, 18428 KB] g=123, 315 evaluated, 167 expanded
+[t=0.009215s, 18428 KB] New best heuristic value for cg: 54
+[t=0.009221s, 18428 KB] g=124, 318 evaluated, 168 expanded
+[t=0.009232s, 18428 KB] New best heuristic value for cg: 52
+[t=0.009238s, 18428 KB] g=125, 321 evaluated, 169 expanded
+[t=0.009249s, 18428 KB] New best heuristic value for cg: 50
+[t=0.009254s, 18428 KB] g=126, 324 evaluated, 170 expanded
+[t=0.009266s, 18428 KB] New best heuristic value for cg: 48
+[t=0.009273s, 18428 KB] g=127, 327 evaluated, 171 expanded
+[t=0.009285s, 18428 KB] New best heuristic value for cg: 46
+[t=0.009290s, 18428 KB] g=128, 330 evaluated, 172 expanded
+[t=0.009301s, 18428 KB] New best heuristic value for cg: 44
+[t=0.009307s, 18428 KB] g=129, 333 evaluated, 173 expanded
+[t=0.009318s, 18428 KB] New best heuristic value for cg: 42
+[t=0.009324s, 18428 KB] g=130, 336 evaluated, 174 expanded
+[t=0.009336s, 18428 KB] New best heuristic value for cg: 40
+[t=0.009341s, 18428 KB] g=131, 339 evaluated, 175 expanded
+[t=0.009352s, 18428 KB] New best heuristic value for cg: 38
+[t=0.009357s, 18428 KB] g=132, 342 evaluated, 176 expanded
+[t=0.009369s, 18428 KB] New best heuristic value for cg: 36
+[t=0.009375s, 18428 KB] g=133, 345 evaluated, 177 expanded
+[t=0.009386s, 18428 KB] New best heuristic value for cg: 34
+[t=0.009392s, 18428 KB] g=134, 348 evaluated, 178 expanded
+[t=0.009589s, 18428 KB] New best heuristic value for cg: 33
+[t=0.009598s, 18428 KB] g=151, 445 evaluated, 210 expanded
+[t=0.009607s, 18428 KB] New best heuristic value for cg: 32
+[t=0.009613s, 18428 KB] g=152, 447 evaluated, 211 expanded
+[t=0.009619s, 18428 KB] New best heuristic value for cg: 31
+[t=0.009624s, 18428 KB] g=153, 449 evaluated, 212 expanded
+[t=0.009631s, 18428 KB] New best heuristic value for cg: 30
+[t=0.009636s, 18428 KB] g=154, 451 evaluated, 213 expanded
+[t=0.009643s, 18428 KB] New best heuristic value for cg: 29
+[t=0.009648s, 18428 KB] g=155, 453 evaluated, 214 expanded
+[t=0.009655s, 18428 KB] New best heuristic value for cg: 28
+[t=0.009661s, 18428 KB] g=156, 455 evaluated, 215 expanded
+[t=0.009668s, 18428 KB] New best heuristic value for cg: 27
+[t=0.009673s, 18428 KB] g=157, 457 evaluated, 216 expanded
+[t=0.009680s, 18428 KB] New best heuristic value for cg: 26
+[t=0.009687s, 18428 KB] g=158, 459 evaluated, 217 expanded
+[t=0.009693s, 18428 KB] New best heuristic value for cg: 25
+[t=0.009699s, 18428 KB] g=159, 461 evaluated, 218 expanded
+[t=0.009706s, 18428 KB] New best heuristic value for cg: 24
+[t=0.009711s, 18428 KB] g=160, 463 evaluated, 219 expanded
+[t=0.009718s, 18428 KB] New best heuristic value for cg: 23
+[t=0.009723s, 18428 KB] g=161, 465 evaluated, 220 expanded
+[t=0.009730s, 18428 KB] New best heuristic value for cg: 22
+[t=0.009735s, 18428 KB] g=162, 467 evaluated, 221 expanded
+[t=0.009742s, 18428 KB] New best heuristic value for cg: 21
+[t=0.009747s, 18428 KB] g=163, 469 evaluated, 222 expanded
+[t=0.009754s, 18428 KB] New best heuristic value for cg: 20
+[t=0.009761s, 18428 KB] g=164, 471 evaluated, 223 expanded
+[t=0.009768s, 18428 KB] New best heuristic value for cg: 19
+[t=0.009773s, 18428 KB] g=165, 473 evaluated, 224 expanded
+[t=0.009780s, 18428 KB] New best heuristic value for cg: 18
+[t=0.009785s, 18428 KB] g=166, 475 evaluated, 225 expanded
+[t=0.009792s, 18428 KB] New best heuristic value for cg: 17
+[t=0.009797s, 18428 KB] g=167, 477 evaluated, 226 expanded
+[t=0.009805s, 18428 KB] New best heuristic value for cg: 16
+[t=0.009812s, 18428 KB] g=168, 480 evaluated, 227 expanded
+[t=0.009818s, 18428 KB] New best heuristic value for cg: 15
+[t=0.009824s, 18428 KB] g=169, 482 evaluated, 228 expanded
+[t=0.009831s, 18428 KB] New best heuristic value for cg: 14
+[t=0.009836s, 18428 KB] g=170, 484 evaluated, 229 expanded
+[t=0.009843s, 18428 KB] New best heuristic value for cg: 13
+[t=0.009848s, 18428 KB] g=171, 486 evaluated, 230 expanded
+[t=0.009857s, 18428 KB] New best heuristic value for cg: 12
+[t=0.009862s, 18428 KB] g=172, 488 evaluated, 231 expanded
+[t=0.009869s, 18428 KB] New best heuristic value for cg: 11
+[t=0.009874s, 18428 KB] g=173, 490 evaluated, 232 expanded
+[t=0.009880s, 18428 KB] New best heuristic value for cg: 10
+[t=0.009885s, 18428 KB] g=174, 492 evaluated, 233 expanded
+[t=0.009892s, 18428 KB] New best heuristic value for cg: 9
+[t=0.009898s, 18428 KB] g=175, 494 evaluated, 234 expanded
+[t=0.009905s, 18428 KB] New best heuristic value for cg: 8
+[t=0.009910s, 18428 KB] g=176, 496 evaluated, 235 expanded
+[t=0.009917s, 18428 KB] New best heuristic value for cg: 7
+[t=0.009922s, 18428 KB] g=177, 498 evaluated, 236 expanded
+[t=0.009930s, 18428 KB] New best heuristic value for cg: 6
+[t=0.009935s, 18428 KB] g=178, 500 evaluated, 237 expanded
+[t=0.009942s, 18428 KB] New best heuristic value for cg: 5
+[t=0.009948s, 18428 KB] g=179, 502 evaluated, 238 expanded
+[t=0.009956s, 18428 KB] New best heuristic value for cg: 4
+[t=0.009963s, 18428 KB] g=180, 504 evaluated, 239 expanded
+[t=0.009970s, 18428 KB] New best heuristic value for cg: 3
+[t=0.009976s, 18428 KB] g=181, 506 evaluated, 240 expanded
+[t=0.009984s, 18428 KB] New best heuristic value for cg: 2
+[t=0.009990s, 18428 KB] g=182, 508 evaluated, 241 expanded
+[t=0.009998s, 18428 KB] New best heuristic value for cg: 1
+[t=0.010004s, 18428 KB] g=183, 510 evaluated, 242 expanded
+[t=0.010041s, 18556 KB] New best heuristic value for cg: 0
+[t=0.010065s, 18556 KB] g=184, 513 evaluated, 243 expanded
+[t=0.010072s, 18556 KB] Solution found!
+[t=0.010079s, 18556 KB] Actual search time: 0.003282s
+drive waymo stop_0 stop_n_1 (1)
+drive waymo stop_n_1 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_16 (1)
+pickup waymo passenger_3 stop_n_16 (1)
+drive waymo stop_n_16 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_1 (1)
+drive waymo stop_n_1 stop_0 (1)
+drive waymo stop_0 stop_s_1 (1)
+drive waymo stop_s_1 stop_s_2 (1)
+drive waymo stop_s_2 stop_s_3 (1)
+drive waymo stop_s_3 stop_s_4 (1)
+drive waymo stop_s_4 stop_s_5 (1)
+drive waymo stop_s_5 stop_s_6 (1)
+drive waymo stop_s_6 stop_s_7 (1)
+drive waymo stop_s_7 stop_s_8 (1)
+drive waymo stop_s_8 stop_s_9 (1)
+drive waymo stop_s_9 stop_s_10 (1)
+drive waymo stop_s_10 stop_s_11 (1)
+drive waymo stop_s_11 stop_s_12 (1)
+drive waymo stop_s_12 stop_s_13 (1)
+drive waymo stop_s_13 stop_s_14 (1)
+drive waymo stop_s_14 stop_s_15 (1)
+drive waymo stop_s_15 stop_s_16 (1)
+dropoff waymo passenger_3 stop_s_16 (1)
+pickup waymo passenger_1 stop_s_16 (1)
+drive waymo stop_s_16 stop_s_15 (1)
+drive waymo stop_s_15 stop_s_14 (1)
+drive waymo stop_s_14 stop_s_13 (1)
+drive waymo stop_s_13 stop_s_12 (1)
+drive waymo stop_s_12 stop_s_11 (1)
+drive waymo stop_s_11 stop_s_10 (1)
+drive waymo stop_s_10 stop_s_9 (1)
+drive waymo stop_s_9 stop_s_8 (1)
+drive waymo stop_s_8 stop_s_7 (1)
+drive waymo stop_s_7 stop_s_6 (1)
+drive waymo stop_s_6 stop_s_5 (1)
+drive waymo stop_s_5 stop_s_4 (1)
+drive waymo stop_s_4 stop_s_3 (1)
+drive waymo stop_s_3 stop_s_2 (1)
+drive waymo stop_s_2 stop_s_1 (1)
+drive waymo stop_s_1 stop_0 (1)
+drive waymo stop_0 stop_e_1 (1)
+drive waymo stop_e_1 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_16 (1)
+pickup waymo passenger_2 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_1 (1)
+drive waymo stop_e_1 stop_0 (1)
+drive waymo stop_0 stop_n_1 (1)
+drive waymo stop_n_1 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_16 (1)
+dropoff waymo passenger_2 stop_n_16 (1)
+pickup waymo passenger_0 stop_n_16 (1)
+drive waymo stop_n_16 stop_n_15 (1)
+drive waymo stop_n_15 stop_n_14 (1)
+drive waymo stop_n_14 stop_n_13 (1)
+drive waymo stop_n_13 stop_n_12 (1)
+drive waymo stop_n_12 stop_n_11 (1)
+drive waymo stop_n_11 stop_n_10 (1)
+drive waymo stop_n_10 stop_n_9 (1)
+drive waymo stop_n_9 stop_n_8 (1)
+drive waymo stop_n_8 stop_n_7 (1)
+drive waymo stop_n_7 stop_n_6 (1)
+drive waymo stop_n_6 stop_n_5 (1)
+drive waymo stop_n_5 stop_n_4 (1)
+drive waymo stop_n_4 stop_n_3 (1)
+drive waymo stop_n_3 stop_n_2 (1)
+drive waymo stop_n_2 stop_n_1 (1)
+drive waymo stop_n_1 stop_0 (1)
+drive waymo stop_0 stop_e_1 (1)
+drive waymo stop_e_1 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_16 (1)
+dropoff waymo passenger_1 stop_e_16 (1)
+drive waymo stop_e_16 stop_e_15 (1)
+drive waymo stop_e_15 stop_e_14 (1)
+drive waymo stop_e_14 stop_e_13 (1)
+drive waymo stop_e_13 stop_e_12 (1)
+drive waymo stop_e_12 stop_e_11 (1)
+drive waymo stop_e_11 stop_e_10 (1)
+drive waymo stop_e_10 stop_e_9 (1)
+drive waymo stop_e_9 stop_e_8 (1)
+drive waymo stop_e_8 stop_e_7 (1)
+drive waymo stop_e_7 stop_e_6 (1)
+drive waymo stop_e_6 stop_e_5 (1)
+drive waymo stop_e_5 stop_e_4 (1)
+drive waymo stop_e_4 stop_e_3 (1)
+drive waymo stop_e_3 stop_e_2 (1)
+drive waymo stop_e_2 stop_e_1 (1)
+drive waymo stop_e_1 stop_0 (1)
+drive waymo stop_0 stop_s_1 (1)
+drive waymo stop_s_1 stop_s_2 (1)
+drive waymo stop_s_2 stop_s_3 (1)
+drive waymo stop_s_3 stop_s_4 (1)
+drive waymo stop_s_4 stop_s_5 (1)
+drive waymo stop_s_5 stop_s_6 (1)
+drive waymo stop_s_6 stop_s_7 (1)
+drive waymo stop_s_7 stop_s_8 (1)
+drive waymo stop_s_8 stop_s_9 (1)
+drive waymo stop_s_9 stop_s_10 (1)
+drive waymo stop_s_10 stop_s_11 (1)
+drive waymo stop_s_11 stop_s_12 (1)
+drive waymo stop_s_12 stop_s_13 (1)
+drive waymo stop_s_13 stop_s_14 (1)
+drive waymo stop_s_14 stop_s_15 (1)
+drive waymo stop_s_15 stop_s_16 (1)
+dropoff waymo passenger_0 stop_s_16 (1)
+[t=0.010086s, 18556 KB] Plan length: 184 step(s).
+[t=0.010086s, 18556 KB] Plan cost: 184
+[t=0.010086s, 18556 KB] Expanded 244 state(s).
+[t=0.010086s, 18556 KB] Reopened 0 state(s).
+[t=0.010086s, 18556 KB] Evaluated 513 state(s).
+[t=0.010086s, 18556 KB] Evaluations: 513
+[t=0.010086s, 18556 KB] Generated 756 state(s).
+[t=0.010086s, 18556 KB] Dead ends: 0 state(s).
+[t=0.010086s, 18556 KB] Number of registered states: 513
+[t=0.010086s, 18556 KB] Int hash set load factor: 513/1024 = 0.500977
+[t=0.010086s, 18556 KB] Int hash set resizes: 10
+[t=0.010086s, 18556 KB] Search time: 0.003347s
+[t=0.010086s, 18556 KB] Total time: 0.010086s
+Solution found.
+Peak memory: 18556 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 0.19s

@@ -1,0 +1,214 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q3/domain.pddl q3/problem5.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 16 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+356 relevant atoms
+317 auxiliary atoms
+673 final queue length
+736 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.005s wall-clock]
+Computing fact groups...
+Finding invariants...
+9 initial candidates
+Finding invariants: [0.000s CPU, 0.000s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.010s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+2 of 2 variables necessary.
+0 of 2 mutex groups necessary.
+126 of 126 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 2
+Translator derived variables: 0
+Translator facts: 65
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 126
+Translator axioms: 0
+Translator task size: 510
+Translator peak memory: 32664 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.020s CPU, 0.011s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([cg()])' --internal-plan-file sas_plan < output.sas
+[t=0.000711s, 12128 KB] reading input...
+[t=0.001422s, 12128 KB] done reading input!
+[t=0.003545s, 12392 KB] Initializing causal graph heuristic...
+[t=0.003625s, 12392 KB] Initializing heuristic cache... building causal graph...done! [t=0.000006s]
+[t=0.003774s, 12796 KB] done!
+[t=0.003826s, 12796 KB] Building successor generator...done!
+[t=0.003874s, 12796 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.003880s, 12796 KB] time for successor generation creation: 0.000029s
+[t=0.003889s, 12796 KB] Variables: 2
+[t=0.003898s, 12796 KB] FactPairs: 65
+[t=0.003904s, 12796 KB] Bytes per state: 4
+[t=0.003918s, 12796 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.003942s, 12928 KB] New best heuristic value for cg: 33
+[t=0.003951s, 12928 KB] g=0, 1 evaluated, 0 expanded
+[t=0.003961s, 12928 KB] Initial heuristic value for cg: 33
+[t=0.003971s, 12928 KB] pruning method: none
+[t=0.003992s, 12928 KB] New best heuristic value for cg: 32
+[t=0.004001s, 12928 KB] g=1, 3 evaluated, 1 expanded
+[t=0.004021s, 12928 KB] New best heuristic value for cg: 31
+[t=0.004030s, 12928 KB] g=2, 4 evaluated, 2 expanded
+[t=0.004043s, 12928 KB] New best heuristic value for cg: 30
+[t=0.004052s, 12928 KB] g=3, 5 evaluated, 3 expanded
+[t=0.004067s, 12928 KB] New best heuristic value for cg: 29
+[t=0.004076s, 12928 KB] g=4, 7 evaluated, 4 expanded
+[t=0.004095s, 12928 KB] New best heuristic value for cg: 28
+[t=0.004104s, 12928 KB] g=5, 9 evaluated, 5 expanded
+[t=0.004115s, 12928 KB] New best heuristic value for cg: 27
+[t=0.004123s, 12928 KB] g=6, 11 evaluated, 6 expanded
+[t=0.004140s, 12928 KB] New best heuristic value for cg: 26
+[t=0.004150s, 12928 KB] g=7, 13 evaluated, 7 expanded
+[t=0.004166s, 12928 KB] New best heuristic value for cg: 25
+[t=0.004175s, 12928 KB] g=8, 15 evaluated, 8 expanded
+[t=0.004193s, 12928 KB] New best heuristic value for cg: 24
+[t=0.004202s, 12928 KB] g=9, 17 evaluated, 9 expanded
+[t=0.004219s, 12928 KB] New best heuristic value for cg: 23
+[t=0.004228s, 12928 KB] g=10, 19 evaluated, 10 expanded
+[t=0.004244s, 12928 KB] New best heuristic value for cg: 22
+[t=0.004253s, 12928 KB] g=11, 21 evaluated, 11 expanded
+[t=0.004271s, 12928 KB] New best heuristic value for cg: 21
+[t=0.004280s, 12928 KB] g=12, 23 evaluated, 12 expanded
+[t=0.004298s, 12928 KB] New best heuristic value for cg: 20
+[t=0.004308s, 12928 KB] g=13, 25 evaluated, 13 expanded
+[t=0.004325s, 12928 KB] New best heuristic value for cg: 19
+[t=0.004334s, 12928 KB] g=14, 27 evaluated, 14 expanded
+[t=0.004351s, 12928 KB] New best heuristic value for cg: 18
+[t=0.004359s, 12928 KB] g=15, 29 evaluated, 15 expanded
+[t=0.004376s, 12928 KB] New best heuristic value for cg: 17
+[t=0.004386s, 12928 KB] g=16, 31 evaluated, 16 expanded
+[t=0.004406s, 12928 KB] New best heuristic value for cg: 16
+[t=0.004414s, 12928 KB] g=17, 33 evaluated, 17 expanded
+[t=0.004431s, 12928 KB] New best heuristic value for cg: 15
+[t=0.004439s, 12928 KB] g=18, 35 evaluated, 18 expanded
+[t=0.004457s, 12928 KB] New best heuristic value for cg: 14
+[t=0.004465s, 12928 KB] g=19, 37 evaluated, 19 expanded
+[t=0.004481s, 12928 KB] New best heuristic value for cg: 13
+[t=0.004490s, 12928 KB] g=20, 39 evaluated, 20 expanded
+[t=0.004506s, 12928 KB] New best heuristic value for cg: 12
+[t=0.004515s, 12928 KB] g=21, 41 evaluated, 21 expanded
+[t=0.004532s, 12928 KB] New best heuristic value for cg: 11
+[t=0.004540s, 12928 KB] g=22, 43 evaluated, 22 expanded
+[t=0.004558s, 12928 KB] New best heuristic value for cg: 10
+[t=0.004566s, 12928 KB] g=23, 45 evaluated, 23 expanded
+[t=0.004581s, 12928 KB] New best heuristic value for cg: 9
+[t=0.004586s, 12928 KB] g=24, 47 evaluated, 24 expanded
+[t=0.004596s, 12928 KB] New best heuristic value for cg: 8
+[t=0.004602s, 12928 KB] g=25, 49 evaluated, 25 expanded
+[t=0.004611s, 12928 KB] New best heuristic value for cg: 7
+[t=0.004616s, 12928 KB] g=26, 51 evaluated, 26 expanded
+[t=0.004626s, 12928 KB] New best heuristic value for cg: 6
+[t=0.004631s, 12928 KB] g=27, 53 evaluated, 27 expanded
+[t=0.004641s, 12928 KB] New best heuristic value for cg: 5
+[t=0.004646s, 12928 KB] g=28, 55 evaluated, 28 expanded
+[t=0.004656s, 12928 KB] New best heuristic value for cg: 4
+[t=0.004661s, 12928 KB] g=29, 57 evaluated, 29 expanded
+[t=0.004670s, 12928 KB] New best heuristic value for cg: 3
+[t=0.004675s, 12928 KB] g=30, 59 evaluated, 30 expanded
+[t=0.004685s, 12928 KB] New best heuristic value for cg: 2
+[t=0.004690s, 12928 KB] g=31, 61 evaluated, 31 expanded
+[t=0.004700s, 12928 KB] New best heuristic value for cg: 1
+[t=0.004705s, 12928 KB] g=32, 63 evaluated, 32 expanded
+[t=0.004717s, 12928 KB] New best heuristic value for cg: 0
+[t=0.004722s, 12928 KB] g=33, 65 evaluated, 33 expanded
+[t=0.004727s, 12928 KB] Solution found!
+[t=0.004733s, 12928 KB] Actual search time: 0.000757s
+pickup waymo passenger stop_0 (1)
+drive waymo stop_0 stop_1 (1)
+drive waymo stop_1 stop_2 (1)
+drive waymo stop_2 stop_3 (1)
+drive waymo stop_3 stop_4 (1)
+drive waymo stop_4 stop_5 (1)
+drive waymo stop_5 stop_6 (1)
+drive waymo stop_6 stop_7 (1)
+drive waymo stop_7 stop_8 (1)
+drive waymo stop_8 stop_9 (1)
+drive waymo stop_9 stop_10 (1)
+drive waymo stop_10 stop_11 (1)
+drive waymo stop_11 stop_12 (1)
+drive waymo stop_12 stop_13 (1)
+drive waymo stop_13 stop_14 (1)
+drive waymo stop_14 stop_15 (1)
+drive waymo stop_15 stop_16 (1)
+drive waymo stop_16 stop_17 (1)
+drive waymo stop_17 stop_18 (1)
+drive waymo stop_18 stop_19 (1)
+drive waymo stop_19 stop_20 (1)
+drive waymo stop_20 stop_21 (1)
+drive waymo stop_21 stop_22 (1)
+drive waymo stop_22 stop_23 (1)
+drive waymo stop_23 stop_24 (1)
+drive waymo stop_24 stop_25 (1)
+drive waymo stop_25 stop_26 (1)
+drive waymo stop_26 stop_27 (1)
+drive waymo stop_27 stop_28 (1)
+drive waymo stop_28 stop_29 (1)
+drive waymo stop_29 stop_30 (1)
+drive waymo stop_30 stop_31 (1)
+dropoff waymo passenger stop_31 (1)
+[t=0.004738s, 12928 KB] Plan length: 33 step(s).
+[t=0.004738s, 12928 KB] Plan cost: 33
+[t=0.004738s, 12928 KB] Expanded 34 state(s).
+[t=0.004738s, 12928 KB] Reopened 0 state(s).
+[t=0.004738s, 12928 KB] Evaluated 65 state(s).
+[t=0.004738s, 12928 KB] Evaluations: 65
+[t=0.004738s, 12928 KB] Generated 96 state(s).
+[t=0.004738s, 12928 KB] Dead ends: 0 state(s).
+[t=0.004738s, 12928 KB] Number of registered states: 65
+[t=0.004738s, 12928 KB] Int hash set load factor: 65/128 = 0.507812
+[t=0.004738s, 12928 KB] Int hash set resizes: 7
+[t=0.004738s, 12928 KB] Search time: 0.000821s
+[t=0.004738s, 12928 KB] Total time: 0.004738s
+Solution found.
+Peak memory: 12928 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 0.15s

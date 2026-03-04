@@ -1,0 +1,80 @@
+--- q1 problem 1 ---
+[t=0.003499s, 12392 KB] Initial heuristic value for ff: 3
+[t=0.003629s, 12392 KB] Plan cost: 3
+
+--- q1 problem 2 ---
+[t=0.003664s, 12392 KB] Initial heuristic value for ff: 5
+[t=0.003958s, 12392 KB] Plan cost: 5
+
+--- q1 problem 3 ---
+[t=0.004037s, 12392 KB] Initial heuristic value for ff: 9
+[t=0.004330s, 12392 KB] Plan cost: 9
+
+--- q1 problem 4 ---
+[t=0.003650s, 12392 KB] Initial heuristic value for ff: 17
+[t=0.003914s, 12392 KB] Plan cost: 17
+
+--- q1 problem 5 ---
+[t=0.004843s, 12524 KB] Initial heuristic value for ff: 33
+[t=0.005947s, 12524 KB] Plan cost: 33
+
+--- q2 problem 1 ---
+[t=0.003959s, 12392 KB] Initial heuristic value for ff: 6
+[t=0.004190s, 12392 KB] Plan cost: 8
+
+--- q2 problem 2 ---
+[t=0.003614s, 12524 KB] Initial heuristic value for ff: 16
+[t=0.003937s, 12524 KB] Plan cost: 24
+
+--- q2 problem 3 ---
+[t=0.005252s, 12524 KB] Initial heuristic value for ff: 30
+[t=0.006233s, 12524 KB] Plan cost: 62
+
+--- q2 problem 4 ---
+[t=0.005583s, 12656 KB] Initial heuristic value for ff: 56
+[t=0.010114s, 12656 KB] Plan cost: 120
+
+--- q2 problem 5 ---
+[t=0.007108s, 12892 KB] Initial heuristic value for ff: 106
+[t=0.019026s, 12892 KB] Plan cost: 234
+
+--- q3 problem 1 ---
+[t=0.007139s, 12392 KB] Initial heuristic value for cg: 3
+[t=0.007408s, 12392 KB] Plan cost: 3
+
+--- q3 problem 2 ---
+[t=0.003990s, 12392 KB] Initial heuristic value for cg: 5
+[t=0.004185s, 12392 KB] Plan cost: 5
+
+--- q3 problem 3 ---
+[t=0.004044s, 12392 KB] Initial heuristic value for cg: 9
+[t=0.004339s, 12392 KB] Plan cost: 9
+
+--- q3 problem 4 ---
+[t=0.004426s, 12540 KB] Initial heuristic value for cg: 17
+[t=0.004692s, 12540 KB] Plan cost: 17
+
+--- q3 problem 5 ---
+[t=0.003961s, 12928 KB] Initial heuristic value for cg: 33
+[t=0.004738s, 12928 KB] Plan cost: 33
+
+--- q4 problem 1 ---
+[t=0.004991s, 12392 KB] Initial heuristic value for cg: 8
+[t=0.005343s, 12392 KB] Plan cost: 8
+
+--- q4 problem 2 ---
+[t=0.003872s, 12524 KB] Initial heuristic value for cg: 28
+[t=0.004489s, 12524 KB] Plan cost: 24
+
+--- q4 problem 3 ---
+[t=0.006335s, 13104 KB] Initial heuristic value for cg: 78
+[t=0.008321s, 13104 KB] Plan cost: 62
+
+--- q4 problem 4 ---
+[t=0.006791s, 18304 KB] Initial heuristic value for cg: 200
+[t=0.010086s, 18556 KB] Plan cost: 184
+
+--- q4 problem 5 ---
+[t=0.017207s, 67192 KB] Initial heuristic value for cg: 490
+[t=0.195380s, 71992 KB] Plan cost: 362
+

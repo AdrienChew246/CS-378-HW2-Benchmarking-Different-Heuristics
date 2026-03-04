@@ -5,14 +5,14 @@ INFO     Running translator.
 INFO     translator stdin: None
 INFO     translator time limit: None
 INFO     translator memory limit: None
-INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q1/domain.pddl q1/problem2.pddl --sas-file output.sas
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py q3/domain.pddl q3/problem2.pddl --sas-file output.sas
 Parsing...
 Parsing: [0.000s CPU, 0.002s wall-clock]
 Normalizing task... [0.000s CPU, 0.000s wall-clock]
 Instantiating...
 Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
 Normalizing Datalog program...
-Normalizing Datalog program: [0.010s CPU, 0.002s wall-clock]
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
 Preparing model... [0.000s CPU, 0.000s wall-clock]
 Generated 16 rules.
 Computing model... [0.000s CPU, 0.000s wall-clock]
@@ -21,7 +21,7 @@ Computing model... [0.000s CPU, 0.000s wall-clock]
 85 final queue length
 92 total queue pushes
 Completing instantiation... [0.000s CPU, 0.000s wall-clock]
-Instantiating: [0.010s CPU, 0.003s wall-clock]
+Instantiating: [0.000s CPU, 0.003s wall-clock]
 Computing fact groups...
 Finding invariants...
 9 initial candidates
@@ -33,7 +33,7 @@ Choosing groups...
 0 uncovered facts
 Choosing groups: [0.000s CPU, 0.000s wall-clock]
 Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
 Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
 Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
 Building mutex information...
@@ -68,61 +68,60 @@ Translator axioms: 0
 Translator task size: 62
 Translator peak memory: 32664 KB
 Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [0.010s CPU, 0.008s wall-clock]
+Done! [0.000s CPU, 0.007s wall-clock]
 translate exit code: 0
 
 INFO     Running search (release).
 INFO     search stdin: output.sas
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas
-[t=0.000752s, 12128 KB] reading input...
-[t=0.001204s, 12128 KB] done reading input!
-[t=0.003359s, 12392 KB] Simplifying 14 unary operators... done! [14 unary operators]
-[t=0.003461s, 12392 KB] time to simplify: 0.000121s
-[t=0.003480s, 12392 KB] Initializing additive heuristic...
-[t=0.003492s, 12392 KB] Initializing FF heuristic...
-[t=0.003514s, 12392 KB] Building successor generator...done!
-[t=0.003552s, 12392 KB] peak memory difference for successor generator creation: 0 KB
-[t=0.003563s, 12392 KB] time for successor generation creation: 0.000008s
-[t=0.003574s, 12392 KB] Variables: 2
-[t=0.003584s, 12392 KB] FactPairs: 9
-[t=0.003593s, 12392 KB] Bytes per state: 4
-[t=0.003611s, 12392 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
-[t=0.003635s, 12392 KB] New best heuristic value for ff: 5
-[t=0.003651s, 12392 KB] g=0, 1 evaluated, 0 expanded
-[t=0.003664s, 12392 KB] Initial heuristic value for ff: 5
-[t=0.003681s, 12392 KB] pruning method: none
-[t=0.003699s, 12392 KB] New best heuristic value for ff: 4
-[t=0.003717s, 12392 KB] g=1, 3 evaluated, 1 expanded
-[t=0.003731s, 12392 KB] New best heuristic value for ff: 3
-[t=0.003814s, 12392 KB] g=2, 4 evaluated, 2 expanded
-[t=0.003889s, 12392 KB] New best heuristic value for ff: 2
-[t=0.003900s, 12392 KB] g=3, 5 evaluated, 3 expanded
-[t=0.003911s, 12392 KB] New best heuristic value for ff: 1
-[t=0.003919s, 12392 KB] g=4, 7 evaluated, 4 expanded
-[t=0.003929s, 12392 KB] New best heuristic value for ff: 0
-[t=0.003936s, 12392 KB] g=5, 9 evaluated, 5 expanded
-[t=0.003943s, 12392 KB] Solution found!
-[t=0.003950s, 12392 KB] Actual search time: 0.000264s
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([cg()])' --internal-plan-file sas_plan < output.sas
+[t=0.000928s, 12128 KB] reading input...
+[t=0.001395s, 12128 KB] done reading input!
+[t=0.003671s, 12392 KB] Initializing causal graph heuristic...
+[t=0.003760s, 12392 KB] Initializing heuristic cache... building causal graph...done! [t=0.000004s]
+[t=0.003789s, 12392 KB] done!
+[t=0.003825s, 12392 KB] Building successor generator...done!
+[t=0.003865s, 12392 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.003878s, 12392 KB] time for successor generation creation: 0.000009s
+[t=0.003889s, 12392 KB] Variables: 2
+[t=0.003903s, 12392 KB] FactPairs: 9
+[t=0.003913s, 12392 KB] Bytes per state: 4
+[t=0.003931s, 12392 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.003960s, 12392 KB] New best heuristic value for cg: 5
+[t=0.003975s, 12392 KB] g=0, 1 evaluated, 0 expanded
+[t=0.003990s, 12392 KB] Initial heuristic value for cg: 5
+[t=0.004004s, 12392 KB] pruning method: none
+[t=0.004024s, 12392 KB] New best heuristic value for cg: 4
+[t=0.004035s, 12392 KB] g=1, 3 evaluated, 1 expanded
+[t=0.004060s, 12392 KB] New best heuristic value for cg: 3
+[t=0.004073s, 12392 KB] g=2, 4 evaluated, 2 expanded
+[t=0.004087s, 12392 KB] New best heuristic value for cg: 2
+[t=0.004098s, 12392 KB] g=3, 5 evaluated, 3 expanded
+[t=0.004114s, 12392 KB] New best heuristic value for cg: 1
+[t=0.004126s, 12392 KB] g=4, 7 evaluated, 4 expanded
+[t=0.004140s, 12392 KB] New best heuristic value for cg: 0
+[t=0.004151s, 12392 KB] g=5, 9 evaluated, 5 expanded
+[t=0.004162s, 12392 KB] Solution found!
+[t=0.004173s, 12392 KB] Actual search time: 0.000168s
 pickup waymo passenger stop_0 (1)
 drive waymo stop_0 stop_1 (1)
 drive waymo stop_1 stop_2 (1)
 drive waymo stop_2 stop_3 (1)
 dropoff waymo passenger stop_3 (1)
-[t=0.003958s, 12392 KB] Plan length: 5 step(s).
-[t=0.003958s, 12392 KB] Plan cost: 5
-[t=0.003958s, 12392 KB] Expanded 6 state(s).
-[t=0.003958s, 12392 KB] Reopened 0 state(s).
-[t=0.003958s, 12392 KB] Evaluated 9 state(s).
-[t=0.003958s, 12392 KB] Evaluations: 9
-[t=0.003958s, 12392 KB] Generated 12 state(s).
-[t=0.003958s, 12392 KB] Dead ends: 0 state(s).
-[t=0.003958s, 12392 KB] Number of registered states: 9
-[t=0.003958s, 12392 KB] Int hash set load factor: 9/16 = 0.562500
-[t=0.003958s, 12392 KB] Int hash set resizes: 4
-[t=0.003958s, 12392 KB] Search time: 0.000347s
-[t=0.003958s, 12392 KB] Total time: 0.003958s
+[t=0.004185s, 12392 KB] Plan length: 5 step(s).
+[t=0.004185s, 12392 KB] Plan cost: 5
+[t=0.004185s, 12392 KB] Expanded 6 state(s).
+[t=0.004185s, 12392 KB] Reopened 0 state(s).
+[t=0.004185s, 12392 KB] Evaluated 9 state(s).
+[t=0.004185s, 12392 KB] Evaluations: 9
+[t=0.004185s, 12392 KB] Generated 12 state(s).
+[t=0.004185s, 12392 KB] Dead ends: 0 state(s).
+[t=0.004185s, 12392 KB] Number of registered states: 9
+[t=0.004185s, 12392 KB] Int hash set load factor: 9/16 = 0.562500
+[t=0.004185s, 12392 KB] Int hash set resizes: 4
+[t=0.004185s, 12392 KB] Search time: 0.000254s
+[t=0.004185s, 12392 KB] Total time: 0.004185s
 Solution found.
 Peak memory: 12392 KB
 Remove intermediate file output.sas
