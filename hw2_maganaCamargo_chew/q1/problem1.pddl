@@ -1,18 +1,20 @@
 (define (problem waymo-problem)
  (:domain waymo-domain)
  (:objects
-   waymo_01 - waymo
-   stop_0 stop_1 - location
-   passenger_01 - passenger
+   waymo - waymo_0
+   stop_0 stop_1 stop_2 - location
+   passenger - passenger_0
  )
  (:init
-              (waymo_at waymo_01 stop_0)
-              (passenger_at passenger_01 stop_0)
+              (waymo_at waymo stop_0)
+              (passenger_at passenger stop_0)
               (connected stop_0 stop_1)
               (connected stop_1 stop_0)
+              (connected stop_1 stop_2)
+              (connected stop_2 stop_1)
  )
  (:goal (and 
-           (passenger_at passenger_01 stop_1)
+           (passenger_at passenger stop_2)
         )
  )
 )
