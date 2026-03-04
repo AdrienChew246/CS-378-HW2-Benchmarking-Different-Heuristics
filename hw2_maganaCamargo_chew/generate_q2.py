@@ -10,7 +10,7 @@ def generate_q2_waymo(directory="q2"):
     DOMAIN_NAME = "waymo_2_electric_boogaloo"
 
     for i in range(1, 6):
-        leg_length = 2**i 
+        leg_length = 3**i 
         problem = Problem(DOMAIN_NAME)
         
         # Types
@@ -76,15 +76,20 @@ def generate_q2_waymo(directory="q2"):
 
         # Objects
         car = Object("waymo", Waymo)
-        person = Object("passenger", Passenger)
-        problem.add_objects([car, person])
-
-        # Initial State
+        problem.add_object(car)
         problem.set_initial_value(waymo_at(car, hub), True)
-        problem.set_initial_value(passenger_at(person, legs[0][-1]), True)
-        
-        # Goal
-        problem.add_goal(passenger_at(person, legs[1][-1]))
+
+        # Passengers
+        for p_idx in range(i):
+            p_obj = Object(f"passenger_{p_idx}", Passenger)
+            problem.add_object(p_obj)
+
+            # Start pos
+            start_leg = legs[p_idx % 4]
+            end_leg = legs[(p_idx + 1) % 4]
+            
+            problem.set_initial_value(passenger_at(p_obj, start_leg[-1]), True)
+            problem.add_goal(passenger_at(p_obj, end_leg[-1]))
 
         # Export
         writer = PDDLWriter(problem)
