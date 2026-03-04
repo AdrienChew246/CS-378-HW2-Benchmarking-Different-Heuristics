@@ -11,7 +11,7 @@ def generate_q1_waymo(directory="q1"):
 
     # Size
     for i in range(1, 6):
-        n_locations = 2**i 
+        n_locations = 3**i 
         problem = Problem(DOMAIN_NAME)
         
         # Types
